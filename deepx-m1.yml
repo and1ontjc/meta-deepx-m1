@@ -1,0 +1,16 @@
+header:
+  version: 14
+
+local_conf_header:
+  deepx-m1: |
+    # Install DeepX stack from meta-deepx-m1
+    IMAGE_INSTALL:append = " dx-driver dx-rt dx-stream dx-stream-sample"
+
+    # Prefer ONNX Runtime from meta-deepx-m1
+    PREFERRED_VERSION_libonnxruntime = "1.20.1"
+
+repos:
+  meta-deepx-m1:
+    url: https://github.com/and1ontjc/meta-deepx-m1.git
+    branch: scarthgap
+
